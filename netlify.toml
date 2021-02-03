@@ -1,11 +1,11 @@
 [build]
-command = "hugo --gc --minify"
-publish = "public"
+publish = "exampleSite/public"
+command = "cd exampleSite && hugo --themesDir ../.."
 
 [build.environment]
 HUGO_VERSION = "0.78.2"
 HUGO_THEME = "uBlogger"
-HUGO_BASEURL = "datola.netlify.app"
+HUGO_BASEURL = "https://ublogger.netlify.app"
 
 [[headers]]
 for = "/*"
