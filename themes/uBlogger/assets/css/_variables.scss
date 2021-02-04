@@ -9,7 +9,7 @@ $global-font-size: 16px;
 $global-font-weight: 400;
 $global-line-height: 1.5rem;
 
-$global-color-accent: #2c678d;
+$global-color-accent: #FFE405;
 
 // Color of the background
 $global-background-color: #ffffff !default;
@@ -26,28 +26,29 @@ $global-font-color: #161209 !default;
 $global-font-color-dark: #a9a9b3 !default;
 
 // Color of the secondary text
-$global-font-secondary-color: #a9a9b3 !default;
+$global-font-secondary-color: #FFE405 !default;
 $global-font-secondary-color-dark: #5d5d5f !default;
+$global-font-tertiary-color:#1ABC9C !default;
 
 // Color of the link
 $global-link-color: #161209 !default;
 $global-link-color-dark: #a9a9b3 !default;
 
 // Color of the hover link
-$global-link-hover-color: #2d96bd !default;
+$global-link-hover-color: #FFE405 !default;
 $global-link-hover-color-dark: #fff !default;
 
 // Color of the border
-$global-border-color: #2c678d !default;
+$global-border-color: #FFE405 !default;
 $global-border-color-dark: #a9a9b3 !default;
 // ========== Global ========== //
 
 // ========== Scrollbar ========== //
 // Color of the scrollbar
-$scrollbar-color: #87878d !default;
+$scrollbar-color: #FFE405 !default;
 
 // Color of the hover scrollbar
-$scrollbar-hover-color: #a9a9b3 !default;
+$scrollbar-hover-color: #1ABC9C !default;
 // ========== Scrollbar ========== //
 
 // ========== Selection ========== //
@@ -73,7 +74,7 @@ $header-hover-color: #161209 !default;
 $header-hover-color-dark: #fff !default;
 
 // Color of the search background
-$search-background-color: #e9e9e9 !default;
+$search-background-color: #3a3a3a !default;
 $search-background-color-dark: #363636 !default;
 // ========== Header ========== //
 
@@ -89,7 +90,7 @@ $toc-title-font-size: 1.2rem !default;
 $toc-content-font-size: 1rem !default;
 
 // Color of the single link
-$single-link-color: #2c678d !default;
+$single-link-color: #FFE405 !default;
 $single-link-color-dark: #55bde2 !default;
 
 // Color of the hover single link
@@ -127,6 +128,8 @@ $code-color-dark: #E5BF78 !default;
 // Color of the code background
 $code-background-color: #ececf0 !default;
 $code-background-color-dark: #272C34 !default;
+$code-background-color-tertiary: #1ABC9C !default;
+
 
 $code-info-color: #9c9c9c !default;
 $code-info-color-dark: #b1b0b0 !default;

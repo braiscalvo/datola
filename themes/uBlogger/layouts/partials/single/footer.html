@@ -9,7 +9,7 @@
 {{- $authorName := $params.author | default .Site.Author.name | default " " -}}
 {{- if not (eq $authorName " ") -}}
 {{ $author := index .Site.Data.authors $authorName }}
-<div class="footer-post-author" {{- if not $author.ps -}} style="border-radius: 10px;border-bottom: solid 2px #ececec" {{- end -}}>
+<div class="footer-post-author" {{- if not $author.ps -}} style="border-radius: 10px;border-bottom: solid 2px #1ABC9C" {{- end -}}>
     <div class="author-avatar"><a href="{{ with $author.link }} {{- . | safeHTML -}}{{ end }}" target="_blank"><img alt="" src="{{ with $author.avatar }} {{- . | safeHTML -}}{{ end }}" border="0"></a></div>
     <div class="author-info">
         <div class="name"><a href="{{ with $author.link }} {{- . | safeHTML -}}{{ end }}" target="_blank">{{ $author.name }}</a></div>

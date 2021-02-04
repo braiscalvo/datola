@@ -140,7 +140,7 @@
     justify-content: space-between;
     line-height: 2em;
     padding: 0 .75rem;
-    background: darken($code-background-color, 6%);
+    background: darken($code-background-color-tertiary, 6%);
 
     [theme=dark] & {
       background: darken(#a9a9b3, 6%);
@@ -148,7 +148,7 @@
   }
 
   .toc-content {
-    background-color: $code-background-color;
+    background-color: $code-background-color-tertiary;
 
     > nav > ul {
       margin: 0;
@@ -162,7 +162,7 @@
 
   &.open {
     .toc-title {
-      background: darken($code-background-color, 3%);
+      background: darken($code-background-color-tertiary, 6%);
 
       [theme=dark] & {
         background: darken($code-background-color-dark, 3%);

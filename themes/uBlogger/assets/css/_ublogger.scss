@@ -61,7 +61,7 @@ article {
 
   .post {
     a:visited {
-      color: #70a0b0;
+      color: #527784;
 
       [theme=dark] & {
         color: #70a0b0;
@@ -234,6 +234,7 @@ a.post-tag-summary {
 
     .home-meta {
       display: inline-block;
+      color: #1ABC9C;
     }
 
     .home-title{
@@ -507,7 +508,7 @@ a.post-tag-summary {
 
   .post-meta-line {
     a {
-      color: #a9a9b3;
+      color: $global-font-secondary-color;
     }
   }
 
@@ -584,7 +585,7 @@ footer {
 
 .page-toc {
   .content-block-position {
-    margin-left: 1rem;
+    // margin-left: 1rem;
   }
 }
 
@@ -598,10 +599,10 @@ footer {
 
 .breadcrumbs {
   font-size: 15px;
-  color: #a9a9b3;
+  color: #1ABC9C;
 
   a {
-    color: #a9a9b3;
+    color: #1ABC9C;
   }
 }
 
@@ -877,7 +878,7 @@ figure {
 
 .post-meta {
   font-size: .875rem;
-  color: $global-font-secondary-color;
+  color: $global-font-tertiary-color;
 
   span {
     display: inline-block;
@@ -903,7 +904,6 @@ figure {
 }
 
 .page.home {
-  padding-top: 32px;
 }
 
 .wrapper {
