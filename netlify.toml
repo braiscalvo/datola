@@ -1,11 +1,8 @@
 [build]
 publish = "public"
-command = "hugo --gc --minify"
+command = "hugo"
 
-[context.production.environment]
-HUGO_VERSION = "0.78.2"
-HUGO_THEME = "uBlogger"
-HUGO_BASEURL = "https://datola.netlify.app"
+
 
 [build.environment]
 HUGO_VERSION = "0.78.2"
