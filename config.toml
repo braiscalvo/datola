@@ -1,7 +1,7 @@
 baseURL = "https://example.com"
 # [en, zh-cn, fr, pl, ...] determines default content language
 # [en, zh-cn, fr, pl, ...] 设置默认的语言
-defaultContentLanguage = "en"
+defaultContentLanguage = "es"
 # theme
 # 主题
 theme = "uBlogger"
@@ -24,12 +24,12 @@ enableGitInfo = true
 enableEmoji = true
 
 [languages]
-  [languages.en]
+  [languages.es]
     weight = 1
     # language code
-    languageCode = "en"
+    languageCode = "es"
     # language name
-    languageName = "English"
+    languageName = "Spanish"
     # whether to include Chinese/Japanese/Korean
     hasCJKLanguage = false
     # default amount of posts in each pages
@@ -37,8 +37,8 @@ enableEmoji = true
     # copyright description used only for seo schema
     copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License."
     # Menu config
-    [languages.en.menu]
-      [[languages.en.menu.main]]
+    [languages.es.menu]
+      [[languages.es.menu.main]]
         identifier = "posts"
         # you can add extra information before the name (HTML format is supported), such as icons
         pre = ""
@@ -49,23 +49,23 @@ enableEmoji = true
         # title will be shown when you hover on this menu link.
         title = ""
         weight = 1
-      [[languages.en.menu.main]]
+      [[languages.es.menu.main]]
         identifier = "tags"
         pre = ""
         post = ""
-        name = "Tags"
+        name = "Etiquetas"
         url = "/tags/"
         title = ""
         weight = 2
-      [[languages.en.menu.main]]
+      [[languages.es.menu.main]]
         identifier = "categories"
         pre = ""
         post = ""
-        name = "Categories"
+        name = "Categorías"
         url = "/categories/"
         title = ""
         weight = 3
-      [[languages.en.menu.main]]
+      [[languages.es.menu.main]]
         identifier = "documentation"
         pre = ""
         post = ""
@@ -73,7 +73,7 @@ enableEmoji = true
         url = "/categories/documentation/"
         title = ""
         weight = 4
-      [[languages.en.menu.main]]
+      [[languages.es.menu.main]]
         identifier = "about"
         pre = ""
         post = ""
@@ -81,23 +81,23 @@ enableEmoji = true
         url = "/about/"
         title = ""
         weight = 5
-      [[languages.en.menu.main]]
+      [[languages.es.menu.main]]
         identifier = "github"
-        pre = "<i class='fab fa-github fa-fw'></i>"
+        pre = "<i class='fab fab fa-linkedin-in fa-fw'></i>"
         post = ""
         name = ""
-        url = "https://github.com/upagge/ublogger"
-        title = "GitHub"
+        url = "https://www.linkedin.com/company/datola/"
+        title = "Linkedn"
         weight = 6
-    [languages.en.params]
+    [languages.es.params]
       # site description
-      description = "About uBlogger Theme"
+      description = "Te mantendremos informado de todas las novedades en el mundo de la analítica digital y los datos."
       # site keywords
-      keywords = ["Theme", "Hugo"]
+      keywords = ["Datos", "Comunidad", "Analítica"]
       # App icon config
-      [languages.en.params.app]
+      [languages.es.params.app]
         # optional site title override for the app when added to an iOS home screen or Android launcher
-        title = "uBlogger"
+        title = "Datola"
         # whether to omit favicon resource links
         noFavicon = false
         # modern SVG favicon to use in place of older style .png and .ico files
@@ -109,7 +109,7 @@ enableEmoji = true
         # Windows v8-10 tile color
         tileColor = "#da532c"
       # Search config
-      [languages.en.params.search]
+      [languages.es.params.search]
         enable = true
         # type of search engine ("lunr", "algolia")
         type = "algolia"
@@ -125,16 +125,16 @@ enableEmoji = true
         highlightTag = "em"
         # whether to use the absolute URL based on the baseURL in search index
         absoluteURL = false
-        [languages.en.params.search.algolia]
-          index = "index.en"
+        [languages.es.params.search.algolia]
+          index = "index.es"
           appID = "PASDMWALPK"
           searchKey = "b42948e51daaa93df92381c8e2ac0f93"
       # Home page config
-      [languages.en.params.home]
+      [languages.es.params.home]
         # amount of RSS pages
         rss = 10
         # Home page profile
-        [languages.en.params.home.profile]
+        [languages.es.params.home.profile]
           enable = true
           # Gravatar Email for preferred avatar in home page
           gravatarEmail = ""
@@ -151,12 +151,12 @@ enableEmoji = true
           # disclaimer (HTML format is supported)
           disclaimer = ""
         # Home page posts
-        [languages.en.params.home.posts]
+        [languages.es.params.home.posts]
           enable = true
           # special amount of posts in each home posts page
           paginate = 6
       # Social config in home page
-      [languages.en.params.social]
+      [languages.es.params.social]
         GitHub = ""
         Linkedin = "company/datola/"
         Twitter = "datola1"
@@ -501,22 +501,22 @@ enableEmoji = true
       enable = true
       Twitter = true
       Facebook = true
-      Linkedin = false
-      Whatsapp = false
+      Linkedin = true
+      Whatsapp = true
       Pinterest = false
       Tumblr = false
-      HackerNews = true
+      HackerNews = false
       Reddit = false
       VK = false
       Buffer = false
       Xing = false
-      Line = true
+      Line = false
       Instapaper = false
       Pocket = false
       Digg = false
       Stumbleupon = false
       Flipboard = false
-      Weibo = true
+      Weibo = false
       Renren = false
       Myspace = false
       Blogger = false
@@ -682,7 +682,7 @@ enableEmoji = true
 # Author config
 # 作者配置
 [author]
-  name = "upagge.en"
+  name = "datola.es"
 
 # Sitemap config
 # 网站地图配置

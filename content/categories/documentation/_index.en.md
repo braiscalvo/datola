@@ -1,3 +1,3 @@
 ---
-title: "Documentation"
+title: "Google Tag Manager"
 ---
