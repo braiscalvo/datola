@@ -1,57 +1,27 @@
 ---
-weight: 4
-title: "Theme Documentation - Extended Shortcodes"
-date: 2020-03-03T16:29:41+08:00
-lastmod: 2020-03-03T16:29:41+08:00
-draft: false
-description: "uBlogger theme provides multiple shortcodes on top of built-in ones in Hugo."
+weight: "4"
+title: GA - 4 Principios
+date: 2020-03-03T16:29:41.000+08:00
+lastmod: 2020-03-03T16:29:41.000+08:00
+description: 'Los principios de la analítica digital '
 resources:
-- name: "featured-image"
-  src: "featured-image.jpg"
-- name: "featured-image-preview"
-  src: "featured-image-preview.jpg"
-
-tags: ["shortcodes"]
-categories: ["documentation"]
-
+- name: featured-image
+  src: featured-image.jpg
+- name: featured-image-preview
+  src: featured-image-preview.jpg
+tags:
+- shortcodes
+- ga4
+categories:
+- documentation
+- analítica
 lightgallery: true
+
 ---
-
-**uBlogger** theme provides multiple shortcodes on top of built-in ones in Hugo.
-
-<!--more-->
 
 ## 1 style
 
-{{< version 0.2.0 changed >}}
-
-{{< admonition >}}
-Hugo **extended** version is necessary for `style` shortcode.
-{{< /admonition >}}
-
-`style` is a shortcode to insert custom style in your post.
-
-The `style` shortcode has two positional parameters.
-
-The **first** one is the custom style content,
-which supports nesting syntax in [:(fab fa-sass fa-fw): SASS](https://sass-lang.com/documentation/style-rules/declarations#nesting)
-and `&` referring to this parent HTML element.
-
-And the **second** one is the tag name of the HTML element wrapping the content you want to change style, and whose default value is `div`.
-
-Example `style` input:
-
-```markdown
-{{</* style "text-align:right; strong{color:#00b1ff;}" */>}}
-This is a **right-aligned** paragraph.
-{{</* /style */>}}
-```
-
-The rendered output looks like this:
-
-{{< style "text-align:right; strong{color:#00b1ff;}" >}}
-This is a **right-aligned** paragraph.
-{{< /style >}}
+dsada dsadsada sdasdsa
 
 ## 2 link
 
@@ -63,27 +33,23 @@ This is a **right-aligned** paragraph.
 
 The `link` shortcode has the following named parameters:
 
-* **href** *[required]* (**first** positional parameter)
+* **href** _\[required\]_ (**first** positional parameter)
 
-    Destination of the link.
+  Destination of the link.
+* **content** _\[optional\]_ (**second** positional parameter)
 
-* **content** *[optional]* (**second** positional parameter)
+  Content of the link, default value is the value of **href** parameter.
 
-    Content of the link, default value is the value of **href** parameter.
+  _Markdown or HTML format is supported._
+* **title** _\[optional\]_ (**third** positional parameter)
 
-    *Markdown or HTML format is supported.*
+  `title` attribute of the HTML `a` tag, which will be shown when hovering on the link.
+* **class** _\[optional\]_
 
-* **title** *[optional]* (**third** positional parameter)
+  `class` attribute of the HTML `a` tag.
+* **rel** _\[optional\]_
 
-    `title` attribute of the HTML `a` tag, which will be shown when hovering on the link.
-
-* **class** *[optional]*
-
-    `class` attribute of the HTML `a` tag.
-
-* **rel** *[optional]*
-
-    Additional `rel` attributes of the HTML `a` tag.
+  Additional `rel` attributes of the HTML `a` tag.
 
 Example `link` input:
 
@@ -129,53 +95,43 @@ The rendered output looks like this (hover over the link, there should be a tool
 
 The `image` shortcode has the following named parameters:
 
-* **src** *[required]* (**first** positional parameter)
+* **src** _\[required\]_ (**first** positional parameter)
 
-    URL of the image to be displayed.
+  URL of the image to be displayed.
+* **alt** _\[optional\]_ (**second** positional parameter)
 
-* **alt** *[optional]* (**second** positional parameter)
+  Alternate text for the image if the image cannot be displayed, default value is the value of **src** parameter.
 
-    Alternate text for the image if the image cannot be displayed, default value is the value of **src** parameter.
+  _Markdown or HTML format is supported._
+* **caption** _\[optional\]_ (**third** positional parameter)
 
-    *Markdown or HTML format is supported.*
+  Image caption.
 
-* **caption** *[optional]* (**third** positional parameter)
+  _Markdown or HTML format is supported._
+* **title** _\[optional\]_
 
-    Image caption.
+  Image title that will be shown when hovering on the image.
+* **class** _\[optional\]_
 
-    *Markdown or HTML format is supported.*
+  `class` attribute of the HTML `figure` tag.
+* **src_s** _\[optional\]_
 
-* **title** *[optional]*
+  URL of the image thumbnail, used for lightgallery, default value is the value of **src** parameter.
+* **src_l** _\[optional\]_
 
-    Image title that will be shown when hovering on the image.
+  URL of the HD image, used for lightgallery, default value is the value of **src** parameter.
+* **height** _\[optional\]_
 
-* **class** *[optional]*
+  `height` attribute of the image.
+* **width** _\[optional\]_
 
-    `class` attribute of the HTML `figure` tag.
+  `width` attribute of the image.
+* **linked** _\[optional\]_
 
-* **src_s** *[optional]*
+  Whether the image needs to be hyperlinked, default value is `true`.
+* **rel** _\[optional\]_
 
-    URL of the image thumbnail, used for lightgallery, default value is the value of **src** parameter.
-
-* **src_l** *[optional]*
-
-    URL of the HD image, used for lightgallery, default value is the value of **src** parameter.
-
-* **height** *[optional]*
-
-    `height` attribute of the image.
-
-* **width** *[optional]*
-
-    `width` attribute of the image.
-
-* **linked** *[optional]*
-
-    Whether the image needs to be hyperlinked, default value is `true`.
-
-* **rel** *[optional]*
-
-    Additional `rel` attributes of the HTML `a` tag, if **linked** parameter is set to `true`.
+  Additional `rel` attributes of the HTML `a` tag, if **linked** parameter is set to `true`.
 
 Example `image` input:
 
@@ -191,7 +147,7 @@ The rendered output looks like this:
 
 The `admonition` shortcode supports **12** types of banners to help you put notice in your page.
 
-*Markdown or HTML format in the content is supported.*
+_Markdown or HTML format in the content is supported._
 
 {{< admonition >}}
 A **note** banner
@@ -243,17 +199,15 @@ A **quote** banner
 
 The `admonition` shortcode has the following named parameters:
 
-* **type** *[optional]* (**first** positional parameter)
+* **type** _\[optional\]_ (**first** positional parameter)
 
-    Type of the `admonition` banner, default value is `note`.
+  Type of the `admonition` banner, default value is `note`.
+* **title** _\[optional\]_ (**second** positional parameter)
 
-* **title** *[optional]* (**second** positional parameter)
+  Title of the `admonition` banner, default value is the value of **type** parameter.
+* **open** _\[optional\]_ (**third** positional parameter) {{< version 0.2.0 changed >}}
 
-    Title of the `admonition` banner, default value is the value of **type** parameter.
-
-* **open** *[optional]* (**third** positional parameter) {{< version 0.2.0 changed >}}
-
-    Whether the content will be expandable by default, default value is `true`.
+  Whether the content will be expandable by default, default value is `true`.
 
 Example `admonition` input:
 
@@ -297,10 +251,10 @@ The rendered output looks like this:
 
 {{< mermaid >}}
 graph LR;
-    A[Hard edge] -->|Link text| B(Round edge)
-    B --> C{Decision}
-    C -->|One| D[Result one]
-    C -->|Two| E[Result two]
+A\[Hard edge\] -->|Link text| B(Round edge)
+B --> C{Decision}
+C -->|One| D\[Result one\]
+C -->|Two| E\[Result two\]
 {{< /mermaid >}}
 
 ### 5.2 Sequence Diagram {#sequence-diagram}
@@ -327,16 +281,16 @@ The rendered output looks like this:
 
 {{< mermaid >}}
 sequenceDiagram
-    participant Alice
-    participant Bob
-    Alice->>John: Hello John, how are you?
-    loop Healthcheck
-        John->John: Fight against hypochondria
-    end
-    Note right of John: Rational thoughts <br/>prevail...
-    John-->Alice: Great!
-    John->Bob: How about you?
-    Bob-->John: Jolly good!
+participant Alice
+participant Bob
+Alice->>John: Hello John, how are you?
+loop Healthcheck
+John->John: Fight against hypochondria
+end
+Note right of John: Rational thoughts <br/>prevail...
+John-->Alice: Great!
+John->Bob: How about you?
+Bob-->John: Jolly good!
 {{< /mermaid >}}
 
 ### 5.3 GANTT {#gantt}
@@ -367,20 +321,20 @@ The rendered output looks like this:
 
 {{< mermaid >}}
 gantt
-    dateFormat  YYYY-MM-DD
-    title Adding GANTT diagram functionality to mermaid
-    section A section
-    Completed task            :done,    des1, 2014-01-06,2014-01-08
-    Active task               :active,  des2, 2014-01-09, 3d
-    Future task               :         des3, after des2, 5d
-    Future task2               :         des4, after des3, 5d
-    section Critical tasks
-    Completed task in the critical line :crit, done, 2014-01-06,24h
-    Implement parser and jison          :crit, done, after des1, 2d
-    Create tests for parser             :crit, active, 3d
-    Future task in critical line        :crit, 5d
-    Create tests for renderer           :2d
-    Add to mermaid                      :1d
+dateFormat  YYYY-MM-DD
+title Adding GANTT diagram functionality to mermaid
+section A section
+Completed task            :done,    des1, 2014-01-06,2014-01-08
+Active task               :active,  des2, 2014-01-09, 3d
+Future task               :         des3, after des2, 5d
+Future task2               :         des4, after des3, 5d
+section Critical tasks
+Completed task in the critical line :crit, done, 2014-01-06,24h
+Implement parser and jison          :crit, done, after des1, 2d
+Create tests for parser             :crit, active, 3d
+Future task in critical line        :crit, 5d
+Create tests for renderer           :2d
+Add to mermaid                      :1d
 {{< /mermaid >}}
 
 ### 5.4 Class Diagram {#class-diagram}
@@ -410,19 +364,19 @@ The rendered output looks like this:
 
 {{< mermaid >}}
 classDiagram
-    Class01 <|-- AveryLongClass : Cool
-    Class03 *-- Class04
-    Class05 o-- Class06
-    Class07 .. Class08
-    Class09 --> C2 : Where am i?
-    Class09 --* C3
-    Class09 --|> Class07
-    Class07 : equals()
-    Class07 : Object[] elementData
-    Class01 : size()
-    Class01 : int chimp
-    Class01 : int gorilla
-    Class08 <--> C2: Cool label
+Class01 <|-- AveryLongClass : Cool
+Class03 _-- Class04
+Class05 o-- Class06
+Class07 .. Class08
+Class09 --> C2 : Where am i?
+Class09 --_ C3
+Class09 --|> Class07
+Class07 : equals()
+Class07 : Object\[\] elementData
+Class01 : size()
+Class01 : int chimp
+Class01 : int gorilla
+Class08 <--> C2: Cool label
 {{< /mermaid >}}
 
 ### 5.5 State Diagram {#state-diagram}
@@ -445,12 +399,12 @@ The rendered output looks like this:
 
 {{< mermaid >}}
 stateDiagram
-    [*] --> Still
-    Still --> [*]
-    Still --> Moving
-    Moving --> Still
-    Moving --> Crash
-    Crash --> [*]
+\[_\] --> Still
+Still --> \[_\]
+Still --> Moving
+Moving --> Still
+Moving --> Crash
+Crash --> \[*\]
 {{< /mermaid >}}
 
 ### 5.6 Git Graph {#git-graph}
@@ -484,19 +438,19 @@ The rendered output looks like this:
 gitGraph:
 options
 {
-    "nodeSpacing": 100,
-    "nodeRadius": 10
+"nodeSpacing": 100,
+"nodeRadius": 10
 }
 end
-    commit
-    branch newbranch
-    checkout newbranch
-    commit
-    commit
-    checkout master
-    commit
-    commit
-    merge newbranch
+commit
+branch newbranch
+checkout newbranch
+commit
+commit
+checkout master
+commit
+commit
+merge newbranch
 {{< /mermaid >}}
 
 ### 5.7 Pie {#pie}
@@ -516,9 +470,9 @@ The rendered output looks like this:
 
 {{< mermaid >}}
 pie
-    "Dogs" : 386
-    "Cats" : 85
-    "Rats" : 15
+"Dogs" : 386
+"Cats" : 85
+"Rats" : 15
 {{< /mermaid >}}
 
 ## 6 echarts
@@ -830,84 +784,83 @@ The rendered output looks like this:
 
 {{< echarts >}}
 {
-  "title": {
-    "text": "Summary Line Chart",
-    "top": "2%",
-    "left": "center"
-  },
-  "tooltip": {
-    "trigger": "axis"
-  },
-  "legend": {
-    "data": ["Email Marketing", "Affiliate Advertising", "Video Advertising", "Direct View", "Search Engine"],
-    "top": "10%"
-  },
-  "grid": {
-    "left": "5%",
-    "right": "5%",
-    "bottom": "5%",
-    "top": "20%",
-    "containLabel": true
-  },
-  "toolbox": {
-    "feature": {
-      "saveAsImage": {
-        "title": "Save as Image"
-      }
-    }
-  },
-  "xAxis": {
-    "type": "category",
-    "boundaryGap": false,
-    "data": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
-  },
-  "yAxis": {
-    "type": "value"
-  },
-  "series": [
-    {
-      "name": "Email Marketing",
-      "type": "line",
-      "stack": "Total",
-      "data": [120, 132, 101, 134, 90, 230, 210]
-    },
-    {
-      "name": "Affiliate Advertising",
-      "type": "line",
-      "stack": "Total",
-      "data": [220, 182, 191, 234, 290, 330, 310]
-    },
-    {
-      "name": "Video Advertising",
-      "type": "line",
-      "stack": "Total",
-      "data": [150, 232, 201, 154, 190, 330, 410]
-    },
-    {
-      "name": "Direct View",
-      "type": "line",
-      "stack": "Total",
-      "data": [320, 332, 301, 334, 390, 330, 320]
-    },
-    {
-      "name": "Search Engine",
-      "type": "line",
-      "stack": "Total",
-      "data": [820, 932, 901, 934, 1290, 1330, 1320]
-    }
-  ]
+"title": {
+"text": "Summary Line Chart",
+"top": "2%",
+"left": "center"
+},
+"tooltip": {
+"trigger": "axis"
+},
+"legend": {
+"data": \["Email Marketing", "Affiliate Advertising", "Video Advertising", "Direct View", "Search Engine"\],
+"top": "10%"
+},
+"grid": {
+"left": "5%",
+"right": "5%",
+"bottom": "5%",
+"top": "20%",
+"containLabel": true
+},
+"toolbox": {
+"feature": {
+"saveAsImage": {
+"title": "Save as Image"
+}
+}
+},
+"xAxis": {
+"type": "category",
+"boundaryGap": false,
+"data": \["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"\]
+},
+"yAxis": {
+"type": "value"
+},
+"series": \[
+{
+"name": "Email Marketing",
+"type": "line",
+"stack": "Total",
+"data": \[120, 132, 101, 134, 90, 230, 210\]
+},
+{
+"name": "Affiliate Advertising",
+"type": "line",
+"stack": "Total",
+"data": \[220, 182, 191, 234, 290, 330, 310\]
+},
+{
+"name": "Video Advertising",
+"type": "line",
+"stack": "Total",
+"data": \[150, 232, 201, 154, 190, 330, 410\]
+},
+{
+"name": "Direct View",
+"type": "line",
+"stack": "Total",
+"data": \[320, 332, 301, 334, 390, 330, 320\]
+},
+{
+"name": "Search Engine",
+"type": "line",
+"stack": "Total",
+"data": \[820, 932, 901, 934, 1290, 1330, 1320\]
+}
+\]
 }
 {{< /echarts >}}
 
 The `echarts` shortcode has also the following named parameters:
 
-* **width** *[optional]* (**first** positional parameter)
+* **width** _\[optional\]_ (**first** positional parameter)
 
-    {{< version 0.2.0 >}} Width of the data visualization, default value is `100%`.
+  {{< version 0.2.0 >}} Width of the data visualization, default value is `100%`.
+* **height** _\[optional\]_ (**second** positional parameter)
 
-* **height** *[optional]* (**second** positional parameter)
-
-    {{< version 0.2.0 >}} Height of the data visualization, default value is `30rem`.
+  {{< version 0.2.0 >}} Height of the data visualization, default value is `30rem`.
 
 ## 7 mapbox
 
@@ -917,53 +870,42 @@ The `echarts` shortcode has also the following named parameters:
 
 The `mapbox` shortcode has the following named parameters to use Mapbox GL JS:
 
-* **lng** *[required]* (**first** positional parameter)
+* **lng** _\[required\]_ (**first** positional parameter)
 
-    Longitude of the inital centerpoint of the map, measured in degrees.
+  Longitude of the inital centerpoint of the map, measured in degrees.
+* **lat** _\[required\]_ (**second** positional parameter)
 
-* **lat** *[required]* (**second** positional parameter)
+  Latitude of the inital centerpoint of the map, measured in degrees.
+* **zoom** _\[optional\]_ (**third** positional parameter)
 
-    Latitude of the inital centerpoint of the map, measured in degrees.
+  The initial zoom level of the map, default value is `10`.
+* **marked** _\[optional\]_ (**fourth** positional parameter)
 
-* **zoom** *[optional]* (**third** positional parameter)
+  Whether to add a marker at the inital centerpoint of the map, default value is `true`.
+* **light-style** _\[optional\]_ (**fifth** positional parameter)
 
-    The initial zoom level of the map, default value is `10`.
+  Style for the light theme, default value is the value set in the [front matter](../theme-documentation-content#front-matter) or the [site configuration](../theme-documentation-basics#site-configuration).
+* **dark-style** _\[optional\]_ (**sixth** positional parameter)
 
-* **marked** *[optional]* (**fourth** positional parameter)
+  Style for the dark theme, default value is the value set in the [front matter](../theme-documentation-content#front-matter) or the [site configuration](../theme-documentation-basics#site-configuration).
+* **navigation** _\[optional\]_
 
-    Whether to add a marker at the inital centerpoint of the map, default value is `true`.
+  Whether to add [NavigationControl](https://docs.mapbox.com/mapbox-gl-js/api#navigationcontrol), default value is the value set in the [front matter](../theme-documentation-content#front-matter) or the [site configuration](../theme-documentation-basics#site-configuration).
+* **geolocate** _\[optional\]_
 
-* **light-style** *[optional]* (**fifth** positional parameter)
+  Whether to add [GeolocateControl](https://docs.mapbox.com/mapbox-gl-js/api#geolocatecontrol), default value is the value set in the [front matter](../theme-documentation-content#front-matter) or the [site configuration](../theme-documentation-basics#site-configuration).
+* **scale** _\[optional\]_
 
-    Style for the light theme, default value is the value set in the [front matter](../theme-documentation-content#front-matter) or the [site configuration](../theme-documentation-basics#site-configuration).
+  Whether to add [ScaleControl](https://docs.mapbox.com/mapbox-gl-js/api#scalecontrol), default value is the value set in the [front matter](../theme-documentation-content#front-matter) or the [site configuration](../theme-documentation-basics#site-configuration).
+* **fullscreen** _\[optional\]_
 
-* **dark-style** *[optional]* (**sixth** positional parameter)
+  Whether to add [FullscreenControl](https://docs.mapbox.com/mapbox-gl-js/api#fullscreencontrol), default value is the value set in the [front matter](../theme-documentation-content#front-matter) or the [site configuration](../theme-documentation-basics#site-configuration).
+* **width** _\[optional\]_
 
-    Style for the dark theme, default value is the value set in the [front matter](../theme-documentation-content#front-matter) or the [site configuration](../theme-documentation-basics#site-configuration).
+  Width of the map, default value is `100%`.
+* **height** _\[optional\]_
 
-* **navigation** *[optional]*
-
-    Whether to add [NavigationControl](https://docs.mapbox.com/mapbox-gl-js/api#navigationcontrol), default value is the value set in the [front matter](../theme-documentation-content#front-matter) or the [site configuration](../theme-documentation-basics#site-configuration).
-
-* **geolocate** *[optional]*
-
-    Whether to add [GeolocateControl](https://docs.mapbox.com/mapbox-gl-js/api#geolocatecontrol), default value is the value set in the [front matter](../theme-documentation-content#front-matter) or the [site configuration](../theme-documentation-basics#site-configuration).
-
-* **scale** *[optional]*
-
-    Whether to add [ScaleControl](https://docs.mapbox.com/mapbox-gl-js/api#scalecontrol), default value is the value set in the [front matter](../theme-documentation-content#front-matter) or the [site configuration](../theme-documentation-basics#site-configuration).
-
-* **fullscreen** *[optional]*
-
-    Whether to add [FullscreenControl](https://docs.mapbox.com/mapbox-gl-js/api#fullscreencontrol), default value is the value set in the [front matter](../theme-documentation-content#front-matter) or the [site configuration](../theme-documentation-basics#site-configuration).
-
-* **width** *[optional]*
-
-    Width of the map, default value is `100%`.
-
-* **height** *[optional]*
-
-    Height of the map, default value is `20rem`.
+  Height of the map, default value is `20rem`.
 
 Example simple `mapbox` input:
 
@@ -1001,21 +943,18 @@ There are three ways to use it the `music` shortcode.
 
 The `music` shortcode has the following named parameters by custom music URL:
 
-* **server** *[required]*
+* **server** _\[required\]_
 
-    URL of the custom music.
+  URL of the custom music.
+* **name** _\[optional\]_
 
-* **name** *[optional]*
+  Name of the custom music.
+* **artist** _\[optional\]_
 
-    Name of the custom music.
+  Artist of the custom music.
+* **cover** _\[required\]_
 
-* **artist** *[optional]*
-
-    Artist of the custom music.
-
-* **cover** *[required]*
-
-    URL of the custom music cover.
+  URL of the custom music cover.
 
 Example `music` input by custom music URL:
 
@@ -1031,10 +970,10 @@ The rendered output looks like this:
 
 The `music` shortcode has one named parameter by music platform URL automatic identification:
 
-* **auto** *[required]* (**first** positional parameter)
+* **auto** _\[required\]_ (**first** positional parameter)
 
-    URL of the music platform URL for automatic identification,
-    which supports `netease`, `tencent` and `xiami` music platform.
+  URL of the music platform URL for automatic identification,
+  which supports `netease`, `tencent` and `xiami` music platform.
 
 Example `music` input by music platform URL automatic identification:
 
@@ -1052,21 +991,19 @@ The rendered output looks like this:
 
 The `music` shortcode has the following named parameters by custom music platform:
 
-* **server** *[required]* (**first** positional parameter)
+* **server** _\[required\]_ (**first** positional parameter)
 
-    [`netease`, `tencent`, `kugou`, `xiami`, `baidu`]
+  \[`netease`, `tencent`, `kugou`, `xiami`, `baidu`\]
 
-    Music platform.
+  Music platform.
+* **type** _\[required\]_ (**second** positional parameter)
 
-* **type** *[required]* (**second** positional parameter)
+  \[`song`, `playlist`, `album`, `search`, `artist`\]
 
-    [`song`, `playlist`, `album`, `search`, `artist`]
+  Type of the music.
+* **id** _\[required\]_ (**third** positional parameter)
 
-    Type of the music.
-
-* **id** *[required]* (**third** positional parameter)
-
-    Song ID, or playlist ID, or album ID, or search keyword, or artist ID.
+  Song ID, or playlist ID, or album ID, or search keyword, or artist ID.
 
 Example `music` input by custom music platform:
 
@@ -1084,51 +1021,43 @@ The rendered output looks like this:
 
 The `music` shortcode has other named parameters applying to the above three ways:
 
-* **theme** *[optional]*
+* **theme** _\[optional\]_
 
-    {{< version 0.2.0 changed >}} Main color of the music player, default value is `#448aff`.
+  {{< version 0.2.0 changed >}} Main color of the music player, default value is `#448aff`.
+* **fixed** _\[optional\]_
 
-* **fixed** *[optional]*
+  Whether to enable fixed mode, default value is `false`.
+* **mini** _\[optional\]_
 
-    Whether to enable fixed mode, default value is `false`.
+  Whether to enable mini mode, default value is `false`.
+* **autoplay** _\[optional\]_
 
-* **mini** *[optional]*
+  Whether to autoplay music, default value is `false`.
+* **volume** _\[optional\]_
 
-    Whether to enable mini mode, default value is `false`.
+  Default volume when the player is first opened, which will be remembered in the browser, default value is `0.7`.
+* **mutex** _\[optional\]_
 
-* **autoplay** *[optional]*
-
-    Whether to autoplay music, default value is `false`.
-
-* **volume** *[optional]*
-
-    Default volume when the player is first opened, which will be remembered in the browser, default value is `0.7`.
-
-* **mutex** *[optional]*
-
-    Whether to pause other players when this player starts playing, default value is `true`.
+  Whether to pause other players when this player starts playing, default value is `true`.
 
 The `music` shortcode has the following named parameters only applying to the type of music list:
 
-* **loop** *[optional]*
+* **loop** _\[optional\]_
 
-    [`all`, `one`, `none`]
+  \[`all`, `one`, `none`\]
 
-    Loop mode of the music list, default value is `none`.
+  Loop mode of the music list, default value is `none`.
+* **order** _\[optional\]_
 
-* **order** *[optional]*
+  \[`list`, `random`\]
 
-    [`list`, `random`]
+  Play order of the music list, default value is `list`.
+* **list-folded** _\[optional\]_
 
-    Play order of the music list, default value is `list`.
+  Whether the music list should be folded at first, default value is `false`.
+* **list-max-height** _\[optional\]_
 
-* **list-folded** *[optional]*
-
-    Whether the music list should be folded at first, default value is `false`.
-
-* **list-max-height** *[optional]*
-
-    Max height of the music list, default value is `340px`.
+  Max height of the music list, default value is `340px`.
 
 ## 9 bilibili
 
@@ -1194,7 +1123,7 @@ This is a *paragraph* with **typing animation** based on [TypeIt](https://typeit
 The rendered output looks like this:
 
 {{< typeit >}}
-This is a *paragraph* with **typing animation** based on [TypeIt](https://typeitjs.com/)...
+This is a _paragraph_ with **typing animation** based on [TypeIt](https://typeitjs.com/)...
 {{< /typeit >}}
 
 Alternatively, you can use custom **HTML tags**.
@@ -1210,7 +1139,7 @@ This is a *paragraph* with **typing animation** based on [TypeIt](https://typeit
 The rendered output looks like this:
 
 {{< typeit tag=h4 >}}
-This is a *paragraph* with **typing animation** based on [TypeIt](https://typeitjs.com/)...
+This is a _paragraph_ with **typing animation** based on [TypeIt](https://typeitjs.com/)...
 {{< /typeit >}}
 
 ### 10.2 Code Content {#code-content}
@@ -1233,9 +1162,9 @@ The rendered output looks like this:
 
 {{< typeit code=java >}}
 public class HelloWorld {
-    public static void main(String []args) {
-        System.out.println("Hello World");
-    }
+public static void main(String \[\]args) {
+System.out.println("Hello World");
+}
 }
 {{< /typeit >}}
 
